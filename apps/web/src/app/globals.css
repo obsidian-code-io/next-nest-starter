@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* ─── Typography ─── */
+  --font-body: var(--font-body), "Inter", system-ui, sans-serif;
+  --font-heading: var(--font-heading), "Inter", system-ui, sans-serif;
+
+  /* ─── Primary ─── */
+  --color-primary: oklch(0.51 0.18 264);
+  --color-primary-foreground: #ffffff;
+  --color-primary-hover: oklch(0.45 0.2 264);
+
+  /* ─── Surfaces ─── */
+  --color-surface: #ffffff;
+  --color-surface-raised: #fafafa;
+  --color-surface-sunken: #f4f4f5;
+
+  /* ─── Borders ─── */
+  --color-border: #e4e4e7;
+  --color-border-subtle: #f4f4f5;
+
+  /* ─── Muted ─── */
+  --color-muted: oklch(0.95 0.01 264);
+  --color-muted-foreground: oklch(0.55 0.02 264);
+
+  /* ─── Destructive ─── */
+  --color-destructive: oklch(0.55 0.2 25);
+  --color-destructive-foreground: #ffffff;
+
+  /* ─── Sidebar ─── */
+  --color-sidebar: oklch(0.14 0.015 264);
+  --color-sidebar-accent: oklch(0.20 0.02 264);
+  --color-sidebar-border: oklch(0.22 0.015 264);
+
+  /* ─── Shadows ─── */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.06), 0 4px 6px rgba(0, 0, 0, 0.04);
+
+  /* ─── Radii ─── */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+}
+
+@layer base {
+  body {
+    @apply text-zinc-900 dark:text-zinc-100 bg-surface;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .dark {
+    --color-surface: #09090b;
+    --color-surface-raised: #18181b;
+    --color-surface-sunken: #0a0a0c;
+    --color-border: #27272a;
+    --color-border-subtle: #1c1c1f;
+  }
+}

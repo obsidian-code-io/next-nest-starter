@@ -1,0 +1,26 @@
+/// Core user entity for authentication and profile data.
+/// Extend this model with additional fields as your project grows.
+
+enum UserRole {
+  ADMIN
+  USER
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String
+  password  String
+  role      UserRole @default(USER)
+  avatarUrl String?
+
+  isActive  Boolean  @default(true)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // ─── Relations ──────────────────────────────────
+  posts Post[]
+
+  @@map("users")
+}

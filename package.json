@@ -1,0 +1,42 @@
+{
+  "name": "monorepo-starter",
+  "private": true,
+  "packageManager": "bun@1.3.11",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "dev:api": "turbo run dev --filter=@monorepo/api",
+    "dev:web": "turbo run dev --filter=@monorepo/web",
+    "build": "turbo run build",
+    "build:api": "turbo run build --filter=@monorepo/api",
+    "build:web": "turbo run build --filter=@monorepo/web",
+    "start:api": "cd apps/api && node dist/main",
+    "start:web": "cd apps/web && next start",
+    "lint": "turbo run lint",
+    "clean": "turbo run clean",
+    "test": "turbo run test",
+    "test:api": "cd apps/api && vitest run",
+    "test:api:watch": "cd apps/api && vitest",
+    "test:api:cov": "cd apps/api && vitest run --coverage",
+    "test:e2e": "cd apps/api && vitest run --config vitest.e2e.config.ts",
+    "db:generate": "bunx prisma generate --schema=packages/prisma/schema",
+    "db:migrate": "bunx prisma migrate dev --schema=packages/prisma/schema",
+    "db:migrate:create": "bunx prisma migrate dev --schema=packages/prisma/schema --create-only",
+    "db:push": "bunx prisma db push --schema=packages/prisma/schema",
+    "db:reset": "bunx prisma migrate reset --schema=packages/prisma/schema",
+    "db:seed": "cd packages/prisma && bun run seed.ts",
+    "db:studio": "bunx prisma studio --schema=packages/prisma/schema",
+    "db:validate": "bunx prisma validate --schema=packages/prisma/schema",
+    "docker:up": "docker compose -f docker-compose.dev.yml up -d",
+    "docker:down": "docker compose -f docker-compose.dev.yml down",
+    "docker:prod": "docker compose up -d",
+    "setup": "bun install && bun run db:generate && bun run docker:up && bun run db:push && bun run db:seed"
+  },
+  "devDependencies": {
+    "turbo": "^2.8.20",
+    "typescript": "^5.7.0"
+  }
+}
