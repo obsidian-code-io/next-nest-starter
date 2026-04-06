@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { ArrowRight, Layers, Zap, Shield, Code2, Database, Box } from 'lucide-react';
-import { useAuthStore } from '@/stores/auth-store';
+import { useAuthStore } from '@/features/auth/store/auth-store';
 
 const features = [
   {
