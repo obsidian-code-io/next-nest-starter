@@ -1,13 +1,14 @@
+import { randomBytes } from 'crypto';
+
 /**
  * Generate a cryptographically random token string.
  */
 export function generateToken(length = 32): string {
   const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
   let result = '';
-  const array = new Uint8Array(length);
-  crypto.getRandomValues(array);
+  const bytes = randomBytes(length);
   for (let i = 0; i < length; i++) {
-    result += chars[array[i] % chars.length];
+    result += chars[bytes[i] % chars.length];
   }
   return result;
 }

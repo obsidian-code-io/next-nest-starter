@@ -13,7 +13,6 @@
       "name": "@monorepo/api",
       "version": "0.0.1",
       "dependencies": {
-        "@monorepo/shared": "*",
         "@nestjs/bullmq": "^11.0.0",
         "@nestjs/cache-manager": "^3.0.0",
         "@nestjs/common": "^11.0.0",
@@ -65,7 +64,6 @@
       "version": "0.1.0",
       "dependencies": {
         "@hookform/resolvers": "^3.9.0",
-        "@monorepo/shared": "*",
         "@radix-ui/react-slot": "^1.1.0",
         "@tanstack/react-query": "^5.75.0",
         "axios": "^1.7.0",
@@ -96,13 +94,6 @@
         "tailwindcss": "^4.0.0",
         "typescript": "^5.7.0",
         "vitest": "^3.1.0",
-      },
-    },
-    "packages/shared": {
-      "name": "@monorepo/shared",
-      "version": "0.0.1",
-      "devDependencies": {
-        "typescript": "^5.7.0",
       },
     },
   },
@@ -412,8 +403,6 @@
     "@microsoft/tsdoc": ["@microsoft/tsdoc@0.16.0", "", {}, "sha512-xgAyonlVVS+q7Vc7qLW0UrJU7rSFcETRWsqdXZtjzRU8dF+6CkozTK4V4y1LwOX7j8r/vHphjDeMeGI4tNGeGA=="],
 
     "@monorepo/api": ["@monorepo/api@workspace:apps/api"],
-
-    "@monorepo/shared": ["@monorepo/shared@workspace:packages/shared"],
 
     "@monorepo/web": ["@monorepo/web@workspace:apps/web"],
 

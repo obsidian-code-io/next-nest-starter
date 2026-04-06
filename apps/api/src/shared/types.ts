@@ -1,4 +1,4 @@
-import { UserRole } from '../constants/enums';
+import { UserRole } from './enums';
 
 /** JWT token payload — decoded from access tokens */
 export interface JwtPayload {

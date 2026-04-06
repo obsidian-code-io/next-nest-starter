@@ -3,7 +3,7 @@ import { PassportStrategy } from '@nestjs/passport';
 import { ExtractJwt, Strategy } from 'passport-jwt';
 import { ConfigService } from '@nestjs/config';
 import { PrismaClient } from '@prisma/client';
-import type { JwtPayload } from '@monorepo/shared';
+import type { JwtPayload } from '../../../shared';
 
 @Injectable()
 export class JwtStrategy extends PassportStrategy(Strategy) {

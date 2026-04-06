@@ -14,7 +14,7 @@ import { CurrentUser } from '../../common/decorators/current-user.decorator';
 import { Public } from '../../common/decorators/public.decorator';
 import { CreatePostDto } from './dto/create-post.dto';
 import { UpdatePostDto } from './dto/update-post.dto';
-import type { JwtPayload } from '@monorepo/shared';
+import type { JwtPayload } from '../../shared';
 
 @ApiTags('posts')
 @Controller('posts')

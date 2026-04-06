@@ -1,5 +1,5 @@
 /**
- * Shared enums used across API and Web apps.
+ * Shared enums used across the API.
  * Keep these in sync with your Prisma schema enums.
  */
 
