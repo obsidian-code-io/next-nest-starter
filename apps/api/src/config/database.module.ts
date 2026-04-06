@@ -1,5 +1,5 @@
 import { Global, Module, OnModuleDestroy } from '@nestjs/common';
-import { PrismaClient } from '@monorepo/prisma';
+import { PrismaClient } from '@prisma/client';
 
 @Global()
 @Module({

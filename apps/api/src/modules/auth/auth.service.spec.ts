@@ -3,7 +3,7 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { JwtService } from '@nestjs/jwt';
 import { ConfigService } from '@nestjs/config';
 import { ConflictException, UnauthorizedException } from '@nestjs/common';
-import { PrismaClient } from '@monorepo/prisma';
+import { PrismaClient } from '@prisma/client';
 import { AuthService } from './auth.service';
 import { createMockPrisma, MockPrismaClient } from '../../test/prisma-mock';
 import * as bcrypt from 'bcrypt';

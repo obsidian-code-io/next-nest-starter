@@ -3,7 +3,7 @@ import {
   NotFoundException,
   ForbiddenException,
 } from '@nestjs/common';
-import { PrismaClient } from '@monorepo/prisma';
+import { PrismaClient } from '@prisma/client';
 
 @Injectable()
 export class PostService {

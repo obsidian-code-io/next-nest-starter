@@ -13,7 +13,6 @@
       "name": "@monorepo/api",
       "version": "0.0.1",
       "dependencies": {
-        "@monorepo/prisma": "*",
         "@monorepo/shared": "*",
         "@nestjs/bullmq": "^11.0.0",
         "@nestjs/cache-manager": "^3.0.0",
@@ -54,6 +53,7 @@
         "@types/supertest": "^6.0.0",
         "jest-mock-extended": "^4.0.0",
         "pino-pretty": "^13.0.0",
+        "prisma": "^6.6.0",
         "supertest": "^7.0.0",
         "typescript": "^5.7.0",
         "unplugin-swc": "^1.5.0",
@@ -96,17 +96,6 @@
         "tailwindcss": "^4.0.0",
         "typescript": "^5.7.0",
         "vitest": "^3.1.0",
-      },
-    },
-    "packages/prisma": {
-      "name": "@monorepo/prisma",
-      "version": "0.0.1",
-      "dependencies": {
-        "@prisma/client": "^6.6.0",
-      },
-      "devDependencies": {
-        "prisma": "^6.6.0",
-        "typescript": "^5.7.0",
       },
     },
     "packages/shared": {
@@ -423,8 +412,6 @@
     "@microsoft/tsdoc": ["@microsoft/tsdoc@0.16.0", "", {}, "sha512-xgAyonlVVS+q7Vc7qLW0UrJU7rSFcETRWsqdXZtjzRU8dF+6CkozTK4V4y1LwOX7j8r/vHphjDeMeGI4tNGeGA=="],
 
     "@monorepo/api": ["@monorepo/api@workspace:apps/api"],
-
-    "@monorepo/prisma": ["@monorepo/prisma@workspace:packages/prisma"],
 
     "@monorepo/shared": ["@monorepo/shared@workspace:packages/shared"],
 
