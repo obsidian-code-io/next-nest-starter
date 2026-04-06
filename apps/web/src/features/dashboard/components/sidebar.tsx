@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { Layers, LayoutDashboard, FileText, Settings, LogOut, User } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { useAuthStore } from '@/stores/auth-store';
+import { useAuthStore } from '@/features/auth/store/auth-store';
 import { clearTokens } from '@/lib/api-client';
 
 const navItems = [
