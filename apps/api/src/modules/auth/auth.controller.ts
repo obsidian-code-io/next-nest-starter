@@ -6,7 +6,7 @@ import { CurrentUser } from '../../common/decorators/current-user.decorator';
 import { RegisterDto } from './dto/register.dto';
 import { LoginDto } from './dto/login.dto';
 import { RefreshDto } from './dto/refresh.dto';
-import type { JwtPayload } from '@monorepo/shared';
+import type { JwtPayload } from '../../shared';
 
 @ApiTags('auth')
 @Controller('auth')

@@ -5,9 +5,9 @@ import {
 } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { ConfigService } from '@nestjs/config';
-import { PrismaClient } from '@monorepo/prisma';
+import { PrismaClient } from '@prisma/client';
 import * as bcrypt from 'bcrypt';
-import type { JwtPayload } from '@monorepo/shared';
+import type { JwtPayload } from '../../shared';
 
 @Injectable()
 export class AuthService {

@@ -12,11 +12,14 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:cov": "vitest run --coverage",
-    "test:e2e": "vitest run --config vitest.e2e.config.ts"
+    "test:e2e": "vitest run --config vitest.e2e.config.ts",
+    "db:generate": "npx prisma generate --schema=prisma/schema",
+    "db:migrate": "npx prisma migrate dev --schema=prisma/schema",
+    "db:push": "npx prisma db push --schema=prisma/schema",
+    "db:seed": "bun run prisma/seed.ts",
+    "db:studio": "npx prisma studio --schema=prisma/schema"
   },
   "dependencies": {
-    "@monorepo/prisma": "*",
-    "@monorepo/shared": "*",
     "@nestjs/bullmq": "^11.0.0",
     "@nestjs/cache-manager": "^3.0.0",
     "@nestjs/common": "^11.0.0",
@@ -44,6 +47,7 @@
     "@sentry/node": "^9.0.0"
   },
   "devDependencies": {
+    "prisma": "^6.6.0",
     "pino-pretty": "^13.0.0",
     "@nestjs/cli": "^11.0.0",
     "@nestjs/schematics": "^11.0.0",
